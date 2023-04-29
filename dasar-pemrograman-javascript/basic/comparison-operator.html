@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operator</title>
+</head>
+<body>
+    <h1>Comparison Operator</h1>
+    <script>
+        let result = 10;
+        let kurangDari = result < 5;
+        let lebihDari = result > 5;
+        let kurangDariSamaDengan = result < 5;
+        let lebihDariSamaDengan = result > 5;
+        let samaDengan = result == "10";
+        let samaDenganType = result === 10;
+        let tidakSamaDengan = result != "5";
+        let tidakSamaDenganType = result !== 5;
+
+        document.writeln(result + " < 5 = " + kurangDari);
+        document.writeln("<br>");
+        document.writeln(result + " > 5 = " + lebihDari);
+        document.writeln("<br>");
+        document.writeln(result + " <= 5 = " + kurangDariSamaDengan);
+        document.writeln("<br>");
+        document.writeln(result + " >= 5 = " + lebihDariSamaDengan);
+        document.writeln("<br>");
+        document.writeln(result + " == 10 = " + samaDengan);
+        document.writeln("<br>");
+        document.writeln(result + " === 10 = " + samaDenganType);
+        document.writeln("<br>");
+        document.writeln(result + " != 5 = " + tidakSamaDengan);
+        document.writeln("<br>");
+        document.writeln(result + " !== 5 = " + tidakSamaDenganType);
+        document.writeln("<br>");
+    </script>
+</body>
+</html>

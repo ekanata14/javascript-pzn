@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <h1>String Template</h1>
+    <p>You can concantenate string with any variable or expression on string template, look at the example below</p>
+    <p>It's also support multiline string</p>
+
+    <script>
+        let nama = "Eka Nata";
+        let hasil = `Nama: ${nama}`;
+
+        document.writeln(hasil);
+        document.writeln("<br>");
+
+        let nilai = 80;
+        let hasil2 = `${hasil} Lulus: ${nilai > 70}`;
+        document.writeln(hasil2);
+
+        let multiLine = `Ini adalah string multiline
+        yang menggunakan string template,
+        mantap bukan 
+        `;
+        document.writeln("<br>");
+        document.writeln("<pre>");
+        document.writeln(multiLine);
+        documentl.writeln("</pre");
+
+    </script>
+</body>
+</html>

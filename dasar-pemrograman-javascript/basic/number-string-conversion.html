@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number String Conversion</title>
+</head>
+<body>
+    <h1>Number String Conversion</h1>
+    <p>If you want to do calculation but the data types of both is number and string</p>
+    <p>You can convert it into number with conversion</p>
+    <p>There are some conversions function that you can use</p>
+    <ul>
+        <li>parseInt(var)</li>
+        <li>parseFloat(var)</li>
+        <li>Number()</li>
+        <li>var.toString()</li>
+    </ul>
+    <script>
+        let a = "1";
+        let b = 1;
+        let total = a + b;
+        document.writeln(total);
+        document.writeln("<br>");
+
+        a = parseInt("1");
+        total = a + b;
+        document.writeln(total);
+        document.writeln("<br>");
+
+        a = parseFloat("1.1");
+        total = a + b;
+        document.writeln(total);
+        document.writeln("<br>");
+
+        a = Number("1");
+        total = a + b;
+        document.writeln(total);
+        document.writeln("<br>");
+
+        c = b.toString();
+        total = a + c;
+        document.writeln(total);
+        document.writeln("<br>");
+        
+        
+    </script>
+</body>
+</html>

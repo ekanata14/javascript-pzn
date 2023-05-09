@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Data Type</title>
+</head>
+<body>
+    <h1>Array Data Type</h1>
+    <script>
+        let arrayKosong = [];
+        let arrayNama = ["gakure", "Dream", "dreamerdream"]; 
+
+        let names = [];
+        names.push("Eka");
+        names.push("Pradipa", "Nata");
+        names.push("Test", "Menambah", "Data");
+
+        console.table(names);
+        console.info(names[1]);
+
+        delete names[2];
+
+        console.table(names);
+        console.info(names.length);
+        names.map((name) =>{
+            console.log(name);
+        });
+    </script>
+</body>
+</html>

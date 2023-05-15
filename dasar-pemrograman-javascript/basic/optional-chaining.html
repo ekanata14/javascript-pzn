@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+<body>
+    <h1>Optional Chaining</h1>
+    <p>Optional Chaining is a feature from javascript. You can use it to check whether the object or object attribute are nullish or not</p>
+    <p>Here is the example below</p>
+    <script>
+        let person = {
+            address: {
+                country : "Indonesia",
+            }
+        };
+
+        let country = person?.address?.country;
+
+        document.writeln(`<p>${country}</p>`)
+    </script>
+</body>
+</html>

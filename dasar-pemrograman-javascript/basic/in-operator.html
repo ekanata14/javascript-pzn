@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Operator</title>
+</head>
+<body>
+    <h1>In Operator</h1>
+    <script>
+        const person = {
+            firstName : "Eka",
+            lastName : "Nata"
+        }
+
+        if("middleName" in person){
+            document.writeln(`Hello ${person.firstName}`);
+        } else{
+            document.writeln("What's up, let's login");
+        }
+
+        const personSecond = {
+            firstName : null,
+            middleName : "Pradipa",
+            lastName : null
+        }
+
+        document.writeln("<br>");
+        
+        const verify = "firstName" in personSecond;
+        document.writeln(verify);
+        
+        document.writeln("<br>");
+
+        const arrayName = ["Eka", "Pradipa", "Nata"];
+        const testArray = 0 in arrayName;
+        if(testArray){
+            document.writeln(`Your First Name: ${arrayName[0]}`);
+        } else{
+            document.writeln("Hello World");
+        }
+
+    </script>
+</body>
+</html>

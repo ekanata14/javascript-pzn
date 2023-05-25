@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Operator on Non Boolean</title>
+</head>
+<body>
+    <h1>Logic Operator on Non Boolean</h1>
+    <p>You can use logic operator outside the boolean condition, you can use || and && outside boolean condition</p>
+    <p>|| Operator will take the first truthy, if the first value is false, then the second value will be taken and vice versa</p>
+    <p>&& Operator will take the first falsy, if the first value is true, then the second value will be taken as false and vice versa</p>
+    <script>
+        console.info("Hello" || "");
+        console.info("" || []);
+        console.info("0" || "NOL");
+        console.info(0 || "NOL");
+        console.info(null || "NULL");
+        console.info(undefined || "UNDEFINED");
+        console.info("undefined" || null);
+
+        const person = {
+            firstName : "Eka",
+            lastName: "Nata"
+        };
+
+        console.info(person.firstName || person.lastName);
+
+        console.info("Hello" && "");
+        console.info("" && []);
+        console.info("0" && "NOL");
+        console.info(0 && "NOL");
+        console.info(null && "NULL");
+        console.info(undefined && "UNDEFINED");
+        console.info("undefined" && null);
+    </script>
+</body>
+</html>

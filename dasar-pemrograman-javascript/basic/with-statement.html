@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <h1>With Statement</h1>
+    <p style="color:red;">This feature is not recommended for professional programming</p>
+    <p style="color:red;">Because it makes an ambigous between object properties and variable names outside the property</p>
+    <script>
+        let person = {
+            firstName : "Eka",
+            middleName : "Pradipa",
+            lastName : "Nata"
+        }
+
+        with(person){
+            document.writeln(`<p>${firstName}</p>`)
+            document.writeln(`<p>${middleName}</p>`)
+            document.writeln(`<p>${lastName}</p>`)
+        }
+    </script>
+</body>
+</html>

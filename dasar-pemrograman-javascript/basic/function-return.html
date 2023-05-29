@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Return</title>
+</head>
+<body>
+    <h1>Function Return</h1>
+    <script>
+        function greetings(name){
+            return `Hello ${name}`;
+        }
+
+        const welcome = greetings("Eka");
+        document.writeln(`<p>${welcome}</p>`);
+
+        function getScore(score){
+            if(score > 90){
+                return "A";
+            } else if(score > 80){
+                return "B";
+            } else if(score > 70){
+                return "C";
+            } else if(score > 60){
+                return "D";
+            } else{
+                return "E";
+            }
+        }
+
+        const scoreResult = getScore(75);
+        document.writeln(`<p>Your Score: ${scoreResult}</p>`);
+        
+
+        function isContains(array, searchValue){
+            for(const element of array){
+                document.writeln(element);
+            }
+            for(const element of array){
+                if(element === searchValue){
+                    return "Data ditemukan";
+                }
+            }
+            return "Data tidak ditemukan";
+        }
+
+        const scores = [90,80,70,60,74,89,100,100,85,97,20];
+        const search = 89;
+        const findResult = isContains(scores, search);
+        document.writeln(findResult);
+    </script>
+</body>
+</html>

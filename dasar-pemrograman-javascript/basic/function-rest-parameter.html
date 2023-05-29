@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Rest Parameter</title>
+</head>
+<body>
+    <h1>Function Rest Parameter</h1>
+    <script>
+        function sumData(name, ...datas){
+            let total = 0;
+            for(const data of datas){
+                total += data;
+            }
+            return `${name} : ${total}`;
+        }
+
+        const result = sumData("Penjualan", 2,3,32,2,3,53,1,325,235);
+        document.writeln(`<p>${result}</p>`);
+
+        const result_2 = sumData("Penjualan Minuman", 3,53,1,325,235);
+        document.writeln(`<p>${result_2}</p>`);
+
+        // Old way to use rest parameter
+        function sumDataOld(){
+            let total = 0;
+            for(const data of arguments){
+                total += data;
+            }
+            return `${name} : ${total}`;
+        }
+
+        const oldResult = sumDataOld(1,23,3,5,6,6,3,3,20,2,5,6,2,3);
+        document.writeln("<p>Old Way to use Rest Parameter known as object arguments</p>");
+        document.writeln(`<p>Old Way Result: ${oldResult}</p>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function as Value</title>
+</head>
+<body>
+    <h1>Function as Value</h1>
+    <script>
+        function sayHello(name){
+            document.writeln(`Hello ${name}`);
+        }
+
+        let say = sayHello;
+
+        say("Eka");
+        document.writeln("<br>");
+        function giveMyName(callback){
+            callback("Testing Callback");
+        }
+
+        let giveName = giveMyName;
+        giveName(say);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+<body>
+    <h1>Function Generator</h1>
+    <p>This function generator is iterable, and it's lazy load. Means that the data must be taken first then the generator will be generated</p>
+    <script>
+        function* generateNames(){
+            yield "Eka";
+            yield "Pradipa";
+            yield "Nata";
+        }
+
+        const names = generateNames();
+        for (const name of names) {
+            console.info(name);
+        }
+
+        // Lazy
+        function* ganjilGenerator(value){
+            for (let i = 1; i <= value; i++) {
+               if(i % 2 === 1){
+                console.info(`Yield ${i}`);
+                yield i;
+               } 
+            }
+        }
+
+        const ganjil = ganjilGenerator(100);
+        // for (const angka of ganjil) {
+        //     console.info(angka);
+        // }
+        console.info(ganjil.next().value);
+        console.info(ganjil.next().value);
+        console.info(ganjil.next().value);
+        console.info(ganjil.next().value);
+        console.info(ganjil.next().value);
+
+        // Eager
+        function ganjilGeneratorEager(value){
+            let result = [];
+            for (let i = 0; i < value; i++) {
+               if(i % 2 === 1){
+                console.info(`Yield ${value}`);
+                result.push(i);
+               }  
+            }
+            return result;
+        }
+
+        const ganjilEager = ganjilGeneratorEager(100);
+        for (const angka of ganjilEager) {
+            console.info(angka);
+        }
+    </script>
+</body>
+</html>

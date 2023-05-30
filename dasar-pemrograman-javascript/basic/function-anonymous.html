@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Anonymous</title>
+</head>
+<body>
+    <h1>Function Anonymous</h1>
+    <script>
+        let say = function(name){
+            document.writeln(`Hello ${name}`);
+        }
+
+        say("Nata");
+        document.writeln("<br>")
+
+        function giveMeName(callback){
+            callback("Pradipa", 18);
+        } 
+
+        giveMeName(function(name, old){
+            document.writeln(`Konnichiwa ${name}, ${old}`);
+        });
+    </script>
+</body>
+</html>

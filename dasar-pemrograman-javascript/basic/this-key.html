@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Key</title>
+</head>
+<body>
+    <h1>This Key</h1>
+    <script>
+        console.info(this);
+
+        function sample(){
+            console.info(this);
+            function inner(){
+                console.info(`Test Inner: ${this}`);
+            }
+            inner();
+        }
+        sample();
+
+        const person = {
+            name : "Eka",
+            sayHello : function sayHello(name){
+                console.info(`Hello ${name} my name is ${this.name}`);
+            }
+        }
+        person.sayHello("Nata");
+    </script>
+</body>
+</html>

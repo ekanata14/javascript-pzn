@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arrow</title>
+</head>
+<body>
+    <h1>Function Arrow</h1>
+    <p>There are some weaknesses of using arrow function</p>
+    <ul>
+        <li>Doesn't have arguments object feature</li>
+        <li>Can't be using generator function</li>
+        <li>Can't access this</li>
+        <li>Can't access super</li>
+    </ul>
+
+    <script>
+        // const sayHello = (name) => {
+        //     console.info(`Hello ${name}`);
+        // }
+        
+        // One line arrow function
+        const sayHello = (name) => console.info(`Hello ${name} (One line arrow function)`);
+        sayHello("Eka");
+
+        // Arrow Function with return value
+        // if you're using one line function, you don't need to type the return key to get the return value, just type the parameter directly, you'll be able to get it
+
+        const getSum = (first, second) => first + second;
+
+        console.info(getSum(10, 20));
+
+        function giveMeName(callback){
+            callback("Eka");
+        }
+
+        giveMeName(name => console.info(`Hello ${name} (anonymous arrow function)`));
+
+    </script>
+</body>
+</html>

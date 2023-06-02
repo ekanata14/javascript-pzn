@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <h1>Destructuring</h1>
+    <script>
+        {
+        const names = ["Eka", "Pradipa", "Nata", "Budi", "Adi"];
+
+        let [firstName, middleName, lastName, ...others] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+
+        }
+        
+        {
+        const person = {
+            firstName : "Eka",
+            lastName : "Nata",
+            address : {
+                street : "Dam Peraupan Street",
+                city : "Denpasar",
+                region : "Indonesia"
+            },
+            hobby : "Enjoying internet",
+            channel : "Eka Nata"
+        }
+        
+        let {firstName, lastName, address : {street, city, region}, ...others} = person;
+        console.info(firstName);
+        console.info(lastName);
+        console.info(street);
+        console.info(city);
+        console.info(region);
+        console.info(others);
+    }
+
+
+    </script>
+</body>
+</html>

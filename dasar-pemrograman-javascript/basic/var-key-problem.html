@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var Key Problem</title>
+</head>
+<body>
+    <h1>Var Key Problem</h1>
+    <script>
+        var i = 20;
+
+        for(var i = 0; i < 10; i++){
+            console.info(`Local var ${i}`);
+        }
+
+        console.info(`Global var ${i}`);
+
+        // The problem for var key is, the scope is unknown whether it's global or local variable.
+        // Because, when we declare some variables with the same name using var key, it'll be change the value for both variables, then it'll become unclear for the variable
+
+        let i = 20;
+
+        for(let i = 0; i < 10; i++){
+            console.info(`Local var ${i}`);
+        }
+
+        console.info(`Global var ${i}`);
+    </script>
+</body>
+</html>

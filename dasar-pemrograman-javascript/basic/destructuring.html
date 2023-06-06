@@ -41,6 +41,67 @@
         console.info(city);
         console.info(region);
         console.info(others);
+
+        {
+            function displayPerson({firstName, middleName, lastName}){
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+
+            const person = {
+                firstName : "Eka", 
+                middleName : "Pradipa",
+                lastName : "Nata",
+            }
+
+            displayPerson(person);
+        }
+
+        {
+            function sum([first, second]){
+                return first + second;
+            }
+
+            console.info(sum([1,1]));
+            console.info(sum([10,10]));
+        }
+
+        // Default Value Destructuring
+        {
+            const names = ["Eka", "Pradipa"];
+            const [firstName, middleName, lastName = "Nita"] = names
+
+            console.info(firstName, middleName, lastName);
+        }
+
+        {
+            const person = {
+                firstName : "Eko",
+                lastName : "Khannedy"
+            }
+
+            let {firstName, middleName = "Kurniawan", lastName} = person
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        console.info("-------------------------------------");
+        
+        {
+            const person = {
+                firstName : "Eko",
+                lastName : "Khannedy"
+            }
+
+            let {firstName : namaDepan, 
+                middleName : namaTengah = "Kurniawan", 
+                lastName : namaBelakang} = person
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+        }
     }
 
 

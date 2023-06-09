@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+<body>
+    <h1>Static Field</h1>
+    <script>
+        class Configuration{
+            static name = "Belajar OOP Javascript";
+            static version = 1.0;
+            static author = "dreamerdream";
+        }
+
+        const conf = new Configuration();
+        console.info(conf);
+
+        console.info(Configuration.name);
+        console.info(Configuration.version);
+        console.info(Configuration.author);
+
+        const testing = Configuration.name;
+        console.info(testing);
+    </script>
+</body>
+</html>

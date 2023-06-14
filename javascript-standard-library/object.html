@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Standard Library</title>
+</head>
+<body>
+    <h1>Object Standard Library</h1>
+    <script>
+        {
+            // Object Freeze & Seal
+        const person = {
+            firstName : "Eka",
+            lastName : "Nata",
+        }
+
+        // Object.freeze(person);
+        Object.seal(person);
+
+        person.firstName = "Gakure";
+        person.lastName = "Dreamerdream";
+        delete person.lastName;
+
+        console.info(person);
+        }
+
+        {
+            // Object Assign
+            const target = {
+                firstName : "Eka"
+            }
+
+            const source = {
+                lastName : "Nata"
+            }
+
+            console.info(target);
+            Object.assign(target,source);
+            console.info(target);
+            console.info(source);
+        }
+
+        {
+            // Object Properties & Values
+            const person = {
+                firstName : "Eka",
+                lastName : "Nata"
+            }
+
+            console.info(Object.values(person));
+            console.info(Object.getOwnPropertyNames(person));
+        }
+    </script>
+</body>
+</html>

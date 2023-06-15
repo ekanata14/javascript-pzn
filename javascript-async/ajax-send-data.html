@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Send Data</title>
+</head>
+<body>
+    <h1>Ajax Send Data</h1>
+    <form>
+        <input type="text" name="username" id="username">
+        <input type="password" name="passwordl" id="password">
+        <input type="button" id="login" value="login">
+    </form>
+
+    <script>
+        function doLogin(){
+            const ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = function (){
+                console.info(`Ready State Change ${ajax.readyState}`);
+            };
+            ajax.open("POST", "https://eolo3fvpq2oi9c.m.pipedream.net");
+            ajax.onload = function(){
+                console.info(ajax.responseText);
+            }
+            ajax.setRequestHeader("Content-Type", "application/json");
+            ajax.send(JSON.stringify({
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value
+            }))
+        };
+
+        document.getElementById("login") = doLogin;
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Create</title>
+</head>
+<body>
+    <h1>Element Create</h1>
+    <div id="menuId" class="menu">
+
+    </div>
+
+    <script>
+        const menu = document.getElementById("menuId");
+        
+        const title = document.createElement("h1");
+        title.textContent = "Belajar Javascript DOM";
+        menu.appendChild(title);
+
+        const description = document.createElement("p");
+        description.textContent = "Selamat datang di Course belajar Javascript DOM";
+        menu.appendChild(description);
+    </script>
+</body>
+</html>
